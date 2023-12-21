@@ -6,8 +6,7 @@ st.title("Try ChatGpt clone by BEX")
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 if st.sidebar.button("Clear History",type = "primary" ):
-    for key in st.session_state.keys():
-        del st.session_state[key]
+    st.session_state.messages = []
 if "openai_model" not in st.session_state:
     st.session_state["openai_model"] = "gpt-3.5-turbo-instruct-0914"
 
