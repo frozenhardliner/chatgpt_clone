@@ -8,7 +8,7 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]
 if st.sidebar.button("Clear History",type = "primary" ):
     st.session_state.messages = []
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = ""
+    st.session_state["openai_model"] = "gpt-4-32k"
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
